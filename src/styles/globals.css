@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 :root {
   --background: #ffffff;
@@ -15,7 +17,70 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: url("/images/bg-shape.jpg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  font-family: "Inter", serif;
+}
+
+/* ----------------------------------------- */
+
+button.btn {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  padding: 0;
+  font-weight: 600;
+  transition: 0.5s all ease;
+  box-shadow: none;
+}
+
+button.btn.dark-border {
+  border: 1px solid #db5aa4;
+  background: #fff;
+  color: #db5aa4;
+}
+
+button.btn.light-border {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #000;
+}
+
+button.btn.btn-bg,
+button.btn.dark-border:hover,
+button.btn.light-border:hover {
+  border: 1px solid #db5aa4;
+  background: #db5aa4;
+  color: #fff;
+}
+
+button.btn.btn-bg:hover {
+  background: #000;
+  border-color: #000;
+}
+
+button.btn:not(:hover) i {
+  color: #db5aa4;
+}
+
+.theme-color {
+  color: #db5aa4 !important;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0 0 10px;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    background: #f6fafd;
+  }
 }
