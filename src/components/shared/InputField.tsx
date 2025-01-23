@@ -16,11 +16,10 @@ export default function InputField({
     onChange,
 }: InputFieldProps) {
     return (
-        <div className="icon-input flex items-center border-b py-3 px-1 mb-5">
-            <img src={iconSrc} alt="" className="mr-3" />
+        <div className="icon-input flex items-center mb-3">
             <input
                 type={type}
-                className="form-control flex-1 outline-none text-sm"
+                className="form-control flex-1 outline-none text-sm border-b py-3 focus:border-b-[#db5aa4] placeholder:text-[#222222]"
                 placeholder={placeholder}
                 aria-label={ariaLabel}
                 value={value}

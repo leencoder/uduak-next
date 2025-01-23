@@ -17,43 +17,15 @@
 }
 
 body {
-  background: #fff;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+  background: #f1f4f5;
   font-family: "Inter", serif;
-  position: relative;
-  z-index: 1;
   color: #222222;
 }
 
-body::before,
-body::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-
-body::before {
-  clip-path: polygon(0% 0%, 200% 0%, 0% 90%, 0% 80%);
-  z-index: -1;
-  height: 100%;
-  background: #f6fafd;
-}
-
-body::after {
-  background: url('/images/bg-shape.png') no-repeat bottom;
-  height: 176px;
-  bottom: 0;
-  background-position: 0px 50px;
-  z-index: -2;
-}
 
 button.btn {
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
   height: 50px;
   font-size: 14px;
   line-height: 50px;
@@ -72,7 +44,7 @@ button.btn.dark-border {
 button.btn.light-border {
   border: 1px solid #d3d3d3;
   background: #fff;
-  color: #000;
+  color: #222222;
 }
 
 button.btn.btn-bg,
@@ -84,8 +56,8 @@ button.btn.light-border:hover {
 }
 
 button.btn.btn-bg:hover {
-  background: #000;
-  border-color: #000;
+  background: #222222;
+  border-color: #222222;
 }
 
 button.btn:not(:hover) i {
@@ -95,4 +67,37 @@ button.btn:not(:hover) i {
 .theme-color {
   color: #db5aa4 !important;
   font-weight: 600;
+}
+
+/* ---------------------------------checkbox----------------------- */
+
+input[type=checkbox] {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  height: 18px;
+  width: 18px;
+  -webkit-appearance: none;
+}
+
+input[type=checkbox]:checked {
+  background-color: #fff;
+  opacity: 1;
+}
+
+input[type=checkbox]:checked:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
 }

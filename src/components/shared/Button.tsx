@@ -16,7 +16,7 @@ export default function Button({
     return (
         <button
             type={type}
-            className={`btn rounded-full ${className}`}
+            className={`btn rounded ${className}`}
             onClick={onClick}
         >
             {children}

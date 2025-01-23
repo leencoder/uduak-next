@@ -45,27 +45,30 @@ export default function Register() {
                             <div className="md:pt-20 md:pr-16 form-detail">
                                 <ul>
                                     <li className="mb-5">
-                                        <h4 className="border-l ps-4 border-[#db5aa4] leading-none mb-2">Lorem ipsum dolor sit amet</h4>
-                                        <p className="ps-5 text-[15px] leading-6">Et harum quidem rerum facilis est et expedita distinctio.</p>
+                                        <h4 className="mb-2 font-bold">Lorem ipsum dolor sit amet</h4>
+                                        <p className="text-[15px] leading-6">Et harum quidem rerum facilis est et expedita distinctio.</p>
                                     </li>
                                     <li className="mb-5">
-                                        <h4 className="border-l ps-4 border-[#db5aa4] leading-none mb-2">Sed ut perspiciatis unde</h4>
-                                        <p className="ps-5 text-[15px] leading-6">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                                        <h4 className="mb-2 font-bold">Sed ut perspiciatis unde</h4>
+                                        <p className="text-[15px] leading-6">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam eius modi.</p>
                                     </li>
                                     <li className="mb-5">
-                                        <h4 className="border-l ps-4 border-[#db5aa4] leading-none mb-2">At vero eos et accusamus</h4>
-                                        <p className="ps-5 text-[15px] leading-6">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.</p>
+                                        <h4 className="mb-2 font-bold">At vero eos et accusamus</h4>
+                                        <p className="text-[15px] leading-6">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         {/* <!-- Right Section --> */}
                         <FormWrapper
-                            logoSrc="/images/logo.png"
+                            logoSrc="/images/qr-logo.png"
                             logoAlt="Quickrooms Logo"
-                            heading="Create Quickrooms Account"
-                            className="mb-5"
+                            heading="Create a Quickrooms account"
+                            className="mb-4"
                         >
+                            <p className="text-center text-[15px] mb-4 font-medium">Access all that Quickrooms has to offer with
+                                a single account.</p>
+
                             <InputField
                                 type="email"
                                 placeholder="Email"
@@ -90,25 +93,26 @@ export default function Register() {
                                 onChange={handleCountryChange}
                                 placeholder="Select your country"
                             />
-                            {/* Sign In Button */}
-                            <Button type="submit" className="btn-bg">Create an account</Button>
                             <div className="flex justify-between items-center mb-5">
                                 <div className="form-check flex">
                                     <input
-                                        className="form-check-input w-5 h-5 border-gray-200"
+                                        className="form-check-input w-[18px] h-[18px] border-gray-200 flex-none"
                                         type="checkbox"
                                         id="flexCheckDefault"
                                     />
                                     <label
-                                        className="form-check-label ml-1 text-xs"
+                                        className="form-check-label ml-2 text-xs"
                                         htmlFor="flexCheckDefault"
                                     >
-                                        Get emails from Quickrooms about updated, news and
-                                        events. You can <Link href="#" className="theme-color">unsubscribe</Link> at any time. <Link href="#" className="theme-color">Privacy Policy</Link>
+                                        Get emails from Quickrooms about updated, news &
+                                        events. You can <Link href="#" className="theme-color">unsubscribe</Link> at any time.
                                     </label>
                                 </div>
                             </div>
-                            <div className="mt-12 text-center"><p className="absolute w-full left-0 bottom-0 mt-5 min-h-[50px] flex items-center justify-center mb-0 bg-[#f6fafd] text-[13px]">Already have an account? <Link href="#" className="theme-color ms-1">Sign in</Link></p></div>
+                            {/* Sign In Button */}
+                            <Button type="submit" className="btn-bg">Create an account</Button>
+
+                            <div className="text-center mt-6"><p className="text-[13px]">Already have an account? <Link href="#" className="theme-color">Sign in</Link></p></div>
                         </FormWrapper>
                     </div>
                 </div>

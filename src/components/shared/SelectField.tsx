@@ -20,14 +20,14 @@ export default function SelectField({
     placeholder = "Select an option",
 }: SelectFieldProps) {
     return (
-        <div className="select-field relative w-full border-b py-3 px-1 mb-5">
+        <div className="select-field relative w-full border-b py-3 mb-3">
             <div className="flex items-center">
                 {/* Flag Image */}
                 {value && options.find((option) => option.value === value)?.flagSrc && (
                     <img
                         src={options.find((option) => option.value === value)?.flagSrc}
                         alt="Flag"
-                        className="w-5 mr-2"
+                        className="w-5"
                     />
                 )}
                 <select
