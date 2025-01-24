@@ -9,6 +9,7 @@ import SelectField from "@/components/shared/SelectField";
 export default function Register() {
     const [countries, setCountries] = useState<{ value: string; label: string; flagSrc: string }[]>([]);
     const [selectedCountry, setSelectedCountry] = useState("united states");
+    const [passwordValue, setPasswordValue] = useState("");
 
     useEffect(() => {
         const fetchCountries = async () => {
@@ -86,6 +87,8 @@ export default function Register() {
                                 placeholder="Password"
                                 iconSrc="/images/lock.png"
                                 ariaLabel="Password"
+                                value={passwordValue}
+                                onChange={(e) => setPasswordValue(e.target.value)}
                             />
                             <SelectField
                                 options={countries}
@@ -101,7 +104,7 @@ export default function Register() {
                                         id="flexCheckDefault"
                                     />
                                     <label
-                                        className="form-check-label ml-2 text-xs"
+                                        className="form-check-label ml-2 text-xs select-none"
                                         htmlFor="flexCheckDefault"
                                     >
                                         Get emails from Quickrooms about updated, news &

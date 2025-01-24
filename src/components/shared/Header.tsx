@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header className="font-inter">
             <div className="px-8">
-                <div className="flex items-center justify-center md:justify-between flex-wrap">
+                <div className="flex items-center justify-center md:justify-between flex-wrap flex-col md:flex-row">
                     {/* Logo Section */}
                     <div className="logo py-6">
                         <Link href="#">

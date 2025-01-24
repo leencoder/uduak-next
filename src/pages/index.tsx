@@ -39,7 +39,7 @@ export default function Home() {
                     id="flexCheckDefault"
                   />
                   <label
-                    className="form-check-label ml-2 text-sm"
+                    className="form-check-label ml-2 text-sm select-none"
                     htmlFor="flexCheckDefault"
                   >
                     Stay signed in
