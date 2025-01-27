@@ -27,13 +27,13 @@ export default function SelectField({
                     <img
                         src={options.find((option) => option.value === value)?.flagSrc}
                         alt="Flag"
-                        className="w-5"
+                        className="w-5 max-w-[20px] flex-shrink-0 flex-grow-0 basis-5"
                     />
                 )}
                 <select
                     value={value}
                     onChange={onChange}
-                    className="form-select flex-1 outline-none bg-transparent text-sm"
+                    className="form-select flex-1 outline-none bg-transparent text-sm max-w-full w-full"
                 >
                     {placeholder && !value && (
                         <option value="" disabled>

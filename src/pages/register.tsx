@@ -61,62 +61,64 @@ export default function Register() {
                             </div>
                         </div>
                         {/* <!-- Right Section --> */}
-                        <FormWrapper
-                            logoSrc="/images/qr-logo.png"
-                            logoAlt="Quickrooms Logo"
-                            heading="Create a Quickrooms account"
-                            className="mb-4"
-                        >
-                            <p className="text-center text-[15px] mb-4 font-medium">Access all that Quickrooms has to offer with
-                                a single account.</p>
+                        <div className="w-full px-[15px] md:px-0 md:w-[435px] md:max-w-[435px] flex-none">
+                            <FormWrapper
+                                logoSrc="/images/qr-logo.png"
+                                logoAlt="Quickrooms Logo"
+                                heading="Create a Quickrooms account"
+                                className="mb-4"
+                            >
+                                <p className="text-center text-[15px] mb-4 font-medium">Access all that Quickrooms has to offer with
+                                    a single account.</p>
 
-                            <InputField
-                                type="email"
-                                placeholder="Email"
-                                iconSrc="/images/email.png"
-                                ariaLabel="Email"
-                            />
-                            <InputField
-                                type="text"
-                                placeholder="Full Name"
-                                iconSrc="/images/user-icon.png"
-                                ariaLabel="Full Name"
-                            />
-                            <InputField
-                                type="password"
-                                placeholder="Password"
-                                iconSrc="/images/lock.png"
-                                ariaLabel="Password"
-                                value={passwordValue}
-                                onChange={(e) => setPasswordValue(e.target.value)}
-                            />
-                            <SelectField
-                                options={countries}
-                                value={selectedCountry}
-                                onChange={handleCountryChange}
-                                placeholder="Select your country"
-                            />
-                            <div className="flex justify-between items-center mb-5">
-                                <div className="form-check flex">
-                                    <input
-                                        className="form-check-input w-[18px] h-[18px] border-gray-200 flex-none"
-                                        type="checkbox"
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        className="form-check-label ml-2 text-xs select-none"
-                                        htmlFor="flexCheckDefault"
-                                    >
-                                        Get emails from Quickrooms about updated, news &
-                                        events. You can <Link href="#" className="theme-color">unsubscribe</Link> at any time.
-                                    </label>
+                                <InputField
+                                    type="email"
+                                    placeholder="Email"
+                                    iconSrc="/images/email.png"
+                                    ariaLabel="Email"
+                                />
+                                <InputField
+                                    type="text"
+                                    placeholder="Full Name"
+                                    iconSrc="/images/user-icon.png"
+                                    ariaLabel="Full Name"
+                                />
+                                <InputField
+                                    type="password"
+                                    placeholder="Password"
+                                    iconSrc="/images/lock.png"
+                                    ariaLabel="Password"
+                                    value={passwordValue}
+                                    onChange={(e) => setPasswordValue(e.target.value)}
+                                />
+                                <SelectField
+                                    options={countries}
+                                    value={selectedCountry}
+                                    onChange={handleCountryChange}
+                                    placeholder="Select your country"
+                                />
+                                <div className="flex justify-between items-center mb-5">
+                                    <div className="form-check flex">
+                                        <input
+                                            className="form-check-input w-[18px] h-[18px] border-gray-200 flex-none"
+                                            type="checkbox"
+                                            id="flexCheckDefault"
+                                        />
+                                        <label
+                                            className="form-check-label ml-2 text-xs select-none"
+                                            htmlFor="flexCheckDefault"
+                                        >
+                                            Get emails from Quickrooms about updated, news &
+                                            events. You can <Link href="#" className="theme-color">unsubscribe</Link> at any time.
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                            {/* Sign In Button */}
-                            <Button type="submit" className="btn-bg">Create an account</Button>
+                                {/* Sign In Button */}
+                                <Button type="submit" className="btn-bg w-full">Create an account</Button>
 
-                            <div className="text-center mt-6"><p className="text-[13px]">Already have an account? <Link href="#" className="theme-color">Sign in</Link></p></div>
-                        </FormWrapper>
+                                <div className="text-center mt-6"><p className="text-[13px]">Already have an account? <Link href="#" className="theme-color">Sign in</Link></p></div>
+                            </FormWrapper>
+                        </div>
                     </div>
                 </div>
             </section>

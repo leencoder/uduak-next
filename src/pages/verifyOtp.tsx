@@ -34,29 +34,21 @@ export default function VerifyOtp() {
             <Header />
             <section className="main-layout font-inter">
                 <div className="container max-w-[1140px] mx-auto">
-                    <div className="flex flex-wrap pt-10">
-                        {/* <!-- Left Section --> */}
-                        <div className="w-full mb-8 lg:mb-0 px-[15px] flex-1 max-w-full">
-                            <div className="md:pt-20 md:pr-16 form-detail">
-                                <h2 className="text-xl font-bold m-0 mb-[10px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
-                                <p className="mb-2.5">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,                 </p>
-                                <p>
-                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.                 </p>
-                            </div>
-                        </div>
+                    <div className="flex flex-wrap pt-10 justify-center">
                         {/* <!-- Right Section --> */}
-                        <FormWrapper
-                            logoSrc="/images/logo.png"
-                            logoAlt="Quickrooms Logo"
-                            heading="Verify OTP"
-                            className="mb-5"
-                        >
-                            <p className="text-center text-sm mb-6 mt-3">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
-                            {/* OTP input */}
-                            <OTPInput length={6} onChange={handleOTPChange} />
-                            <Button type="submit" className="btn-bg" onClick={handleSubmit}>Verify</Button>
-                        </FormWrapper>
+                        <div className="w-full px-[15px] md:px-0 md:w-[435px] md:max-w-[435px] flex-none">
+                            <FormWrapper
+                                logoSrc="/images/qr-logo.png"
+                                logoAlt="Quickrooms Logo"
+                                heading="Verify OTP"
+                                className="mb-5"
+                            >
+                                <p className="text-center text-sm mb-6 mt-3">We will send you a One Time Password on your phone number</p>
+                                {/* OTP input */}
+                                <OTPInput length={6} onChange={handleOTPChange} />
+                                <Button type="submit" className="btn-bg w-full" onClick={handleSubmit}>Continue</Button>
+                            </FormWrapper>
+                        </div>
                     </div>
                 </div>
             </section>
