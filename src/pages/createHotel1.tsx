@@ -18,18 +18,11 @@ export default function Dashboard() {
             <LoggedInHeader />
             <section className="font-inter">
                 <div className="container max-w-[1140px] mx-auto">
-                    <div className="justify-items-end">
-                        <Button type="button" className="btn-bg mb-8 mt-2 w-auto flex items-center gap-2 !h-[40px]">
-                            <img src="/images/add-icon.png" alt="" />
-                            Create Hotel</Button>
+                    <div>
+                        <Button type="button" className="mb-8 mt-2 w-auto flex items-center gap-2 !h-[40px] !px-0 !font-normal">
+                            <img src="/images/back-arrow.png" alt="" />
+                            Back to Hotel Dashboard</Button>
 
-                    </div>
-                    <div className="w-full flex justify-center">
-                        <input
-                            type="text"
-                            placeholder="Type to search"
-                            className="search w-full px-4 py-3 text-sm text-[#222222] placeholder:text-[#222222] bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none text-center"
-                        />
                     </div>
                 </div>
             </section>
